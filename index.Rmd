@@ -1,43 +1,70 @@
 ---
-title: "MyLabJournal"
+title: "Psychology Statistics Honors Project - Robin Kumaratunga"
 output: html_document
 ---
 
 <style type="text/css">
 .title {
   display: none;
-}
-
-#getting-started img {
-  margin-right: 10px;
-}
-
-</style>
-
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-6">
-
-# **My Lab Journal**
-
-This is a template example for lab journaling. Students in Matt Crump's Human Cognition and Performance Lab will use this template to learn R, and other things. Students can replace this text with more fun things. People not in my lab can use this too.
-
-## How to use
-
-1. fork the repo for this website and follow instructions on read me to get set up. [https://github.com/CrumpLab/LabJournalWebsite](https://github.com/CrumpLab/LabJournalWebsite)
-
-2. Blog/journal what you are doing in R, by editing the Journal.Rmd. See the [Journal page](https://crumplab.github.io/LabJournalWebsite/Journal.html) for an example of what to do to get started learning R.
-
-3. See the [links page](https://crumplab.github.io/LabJournalWebsite/Links.html) for lots of helpful links on learning R.
-
-4. Change everything to make it your own.
 
 
-</div>
-<div class="col-sm-6">
+# **FizzBuzz**
 
-### [Crump Lab: Human Cognition and Performance](https://crumplab.github.io)
+```{r}
+AllNumbers <- 1:100
+for(AllNumbers in 1:100)
+ if (AllNumbers %% 3 == 0 && AllNumbers %% 5 == 0) {print('FizzBuzz')
+ } else if (AllNumbers %% 3 == 0) {print('Fizz')
+ }  else if (AllNumbers %% 5 == 0) {print('Buzz')
+ } else {print(AllNumbers)}
+```
 
-<a href = "https://crumplab.github.io">
-![](images/logo.png)
-</a>
-</div>
+# **Snakes and Ladders**
+
+Snakes and Ladders is a board game comprised of 25 spaces, numbered 1 to 25. Certain spaces contain either the bottom or top of either a snake or a ladder. The winner of the game is the individual who reaches the space 100. Players either go down a snake (from the head to the tail) or go up a ladder depending on the number of spaces the individual is made to move. For example, if an individual lands on a ladder at space 3, he or she will automatically move to position 11. There are nine ladders and ten snakes on a board. The individual is given a certain number of spaces to move by rolling a six-sided dice. 
+
+First, the board must be set up properly. The movements that can occur either due to the snakes or the ladders are as follows, whereby the first number within the parenthesis is the starting tile and the second number within the parenthesis is the ending tile:
+
+    (3, 11),
+    (10, 12),
+    (9, 18),
+    (6, 17),
+    (22, 20),
+    (24, 16),
+    (19, 8),
+    (14, 4)
+    
+```{r}
+ladders.df <- data.frame(
+  x = c(3,10,9,6), 
+  y = c(11,12,18,17))
+
+snakes.df <- data.frame(
+  x = c(22,24,19,14), 
+  y = c(20,16,8,4))
+
+ndiceneededtowin <- vector("numeric", length = 1000)
+for(i in 1:1000){
+currentposition <- 0
+ndice <- 0
+nsnakes <- 0
+nladders <- 0
+ntrials = 1000
+while(currentposition < 25) {
+  dice <- sample(1:6, size = 1, replace = TRUE)
+  currentposition <- currentposition + dice
+  ndice <- ndice + 1
+if(any(ladders.df$s %in% currentposition)) {
+  currentposition <- ladders.df$e[ladders.df$s %in% currentposition]
+  ladders <- ladders + 1}
+if(any(snakes.df$s %in% currentposition)) {currentposition <- snakes.df$e[snakes.df$s %in% currentposition] 
+nsnakes<- nsnakes + 1}}
+ x<- ndice
+ ndiceneededtowin[i] <- mean(x, na.rm = TRUE)
+  }
+
+print(ndiceneededtowin)
+hist(ndiceneededtowin)
+meanndiceneededtowin <- mean(ndiceneededtowin)
+c(meanndiceneededtowin)
+```
