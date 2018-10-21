@@ -11,7 +11,7 @@
 
 
 
-<title>MyLabJournal</title>
+<title>Psychology Statistics Honors Project - Robin Kumaratunga</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -89,6 +89,9 @@ img {
 }
 .tabbed-pane {
   padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
 }
 button.code-folding-btn:focus {
   outline: none;
@@ -198,36 +201,212 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">MyLabJournal</h1>
+<h1 class="title toc-ignore">Psychology Statistics Honors Project - Robin Kumaratunga</h1>
 
 </div>
 
 
 <style type="text/css">
-.title {
-  display: none;
-}
-
-#getting-started img {
-  margin-right: 10px;
-}
-
-</style>
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-6">
-<h1 id="my-lab-journal"><strong>My Lab Journal</strong></h1>
-<p>This is a template example for lab journaling. Students in Matt Crump’s Human Cognition and Performance Lab will use this template to learn R, and other things. Students can replace this text with more fun things. People not in my lab can use this too.</p>
-<h2 id="how-to-use">How to use</h2>
-<ol style="list-style-type: decimal">
-<li><p>fork the repo for this website and follow instructions on read me to get set up. <a href="https://github.com/CrumpLab/LabJournalWebsite" class="uri">https://github.com/CrumpLab/LabJournalWebsite</a></p></li>
-<li><p>Blog/journal what you are doing in R, by editing the Journal.Rmd. See the <a href="https://crumplab.github.io/LabJournalWebsite/Journal.html">Journal page</a> for an example of what to do to get started learning R.</p></li>
-<li><p>See the <a href="https://crumplab.github.io/LabJournalWebsite/Links.html">links page</a> for lots of helpful links on learning R.</p></li>
-<li><p>Change everything to make it your own.</p></li>
-</ol>
+<p>.title { display: none;</p>
+<div id="fizzbuzz" class="section level1">
+<h1><strong>FizzBuzz</strong></h1>
+<pre class="r"><code>AllNumbers &lt;- 1:100
+for(AllNumbers in 1:100)
+ if (AllNumbers %% 3 == 0 &amp;&amp; AllNumbers %% 5 == 0) {print(&#39;FizzBuzz&#39;)
+ } else if (AllNumbers %% 3 == 0) {print(&#39;Fizz&#39;)
+ }  else if (AllNumbers %% 5 == 0) {print(&#39;Buzz&#39;)
+ } else {print(AllNumbers)}</code></pre>
+<pre><code>## [1] 1
+## [1] 2
+## [1] &quot;Fizz&quot;
+## [1] 4
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] 7
+## [1] 8
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] 11
+## [1] &quot;Fizz&quot;
+## [1] 13
+## [1] 14
+## [1] &quot;FizzBuzz&quot;
+## [1] 16
+## [1] 17
+## [1] &quot;Fizz&quot;
+## [1] 19
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] 22
+## [1] 23
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] 26
+## [1] &quot;Fizz&quot;
+## [1] 28
+## [1] 29
+## [1] &quot;FizzBuzz&quot;
+## [1] 31
+## [1] 32
+## [1] &quot;Fizz&quot;
+## [1] 34
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] 37
+## [1] 38
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] 41
+## [1] &quot;Fizz&quot;
+## [1] 43
+## [1] 44
+## [1] &quot;FizzBuzz&quot;
+## [1] 46
+## [1] 47
+## [1] &quot;Fizz&quot;
+## [1] 49
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] 52
+## [1] 53
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] 56
+## [1] &quot;Fizz&quot;
+## [1] 58
+## [1] 59
+## [1] &quot;FizzBuzz&quot;
+## [1] 61
+## [1] 62
+## [1] &quot;Fizz&quot;
+## [1] 64
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] 67
+## [1] 68
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] 71
+## [1] &quot;Fizz&quot;
+## [1] 73
+## [1] 74
+## [1] &quot;FizzBuzz&quot;
+## [1] 76
+## [1] 77
+## [1] &quot;Fizz&quot;
+## [1] 79
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] 82
+## [1] 83
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] 86
+## [1] &quot;Fizz&quot;
+## [1] 88
+## [1] 89
+## [1] &quot;FizzBuzz&quot;
+## [1] 91
+## [1] 92
+## [1] &quot;Fizz&quot;
+## [1] 94
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] 97
+## [1] 98
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;</code></pre>
 </div>
-<div class="col-sm-6">
-<h3 id="crump-lab-human-cognition-and-performance"><a href="https://crumplab.github.io">Crump Lab: Human Cognition and Performance</a></h3>
-<p><a href = "https://crumplab.github.io"> <img src="images/logo.png" /> </a></p>
+<div id="snakes-and-ladders" class="section level1">
+<h1><strong>Snakes and Ladders</strong></h1>
+<p>Snakes and Ladders is a board game comprised of 25 spaces, numbered 1 to 25. Certain spaces contain either the bottom or top of either a snake or a ladder. The winner of the game is the individual who reaches the space 100. Players either go down a snake (from the head to the tail) or go up a ladder depending on the number of spaces the individual is made to move. For example, if an individual lands on a ladder at space 3, he or she will automatically move to position 11. There are nine ladders and ten snakes on a board. The individual is given a certain number of spaces to move by rolling a six-sided dice.</p>
+<p>First, the board must be set up properly. The movements that can occur either due to the snakes or the ladders are as follows, whereby the first number within the parenthesis is the starting tile and the second number within the parenthesis is the ending tile:</p>
+<pre><code>(3, 11),
+(10, 12),
+(9, 18),
+(6, 17),
+(22, 20),
+(24, 16),
+(19, 8),
+(14, 4)</code></pre>
+<pre class="r"><code>ladders.df &lt;- data.frame(
+  x = c(3,10,9,6), 
+  y = c(11,12,18,17))
+
+snakes.df &lt;- data.frame(
+  x = c(22,24,19,14), 
+  y = c(20,16,8,4))
+
+ndiceneededtowin &lt;- vector(&quot;numeric&quot;, length = 1000)
+for(i in 1:1000){
+currentposition &lt;- 0
+ndice &lt;- 0
+nsnakes &lt;- 0
+nladders &lt;- 0
+ntrials = 1000
+while(currentposition &lt; 25) {
+  dice &lt;- sample(1:6, size = 1, replace = TRUE)
+  currentposition &lt;- currentposition + dice
+  ndice &lt;- ndice + 1
+if(any(ladders.df$s %in% currentposition)) {
+  currentposition &lt;- ladders.df$e[ladders.df$s %in% currentposition]
+  ladders &lt;- ladders + 1}
+if(any(snakes.df$s %in% currentposition)) {currentposition &lt;- snakes.df$e[snakes.df$s %in% currentposition] 
+nsnakes&lt;- nsnakes + 1}}
+ x&lt;- ndice
+ ndiceneededtowin[i] &lt;- mean(x, na.rm = TRUE)
+  }
+
+print(ndiceneededtowin)</code></pre>
+<pre><code>##    [1] 11  8  6  9  7  7  7  7 10 10  9  9  6  8  6  6 10 10  7  7  7  7  7
+##   [24]  6  9  8  7 10  6  9  5  6 10 11 10  8  9  7  9  9  9  8  8  7  7  9
+##   [47]  7  8  8  8  6  6  8  6  8  7  8  7  8  5  7  6  7  8  8  6  9 10  7
+##   [70] 11  7  9  8  6  7  8  5  8  9  7 10  8  5  8  8  5  9 12  7 10  7  7
+##   [93]  9  9  5  7  6  9  8  8  8  9  9  7  6  7  7 10  8  8  7  8  8  7  7
+##  [116]  6  6  7  7 10  6 10  9  8 10  8  7 10  5 10  7  8  8  5  7  7  7  7
+##  [139]  7  9  9  6  7  8  7  7  9  8  8  6  6  8  6  8  8 10  6  8  9  5  8
+##  [162]  7  9  6 10  7  6  6  7  9  7  9  9  8  8  9  9 10  8  7  7  8  6  7
+##  [185]  7  6  8 10  6  6  7  7  6  6  9  9  7  6  6  7  7  6  9  6 10  6  8
+##  [208]  7  7  9  6  7  7  8  7  7  8  8  7  9 10  6  6  6  7 10  7  8  7 12
+##  [231]  7  8  8  7  7  7  6  9  9  9  9  7  8  7  8  6  6  8  7  9  8  7  8
+##  [254]  6  6 10  8  7  8  8  9 10  7 11  7  6  9  8  9  9  6  5  7 10  8 10
+##  [277]  8  5  6 10  6  8  8  7  8  7  9  8  8  6  8  9  8  9  9  8 11  7  6
+##  [300]  8  8  8  8  8  7  8  6  6  5  8 11  7  8  8 11  7  9  6  9 11  7  7
+##  [323]  9  9  9  6  6  6  8  6  7  8  6 10  8  8  8  7  6  9  8  8  8  7  7
+##  [346]  7  7  6  9  6  6  6  9  9  8  8  8  9  7  8  7 10  8  9  7  8  9  7
+##  [369]  9  8  9  8  8  9  6  7  6  8  7  8  8  7  6  6  7  7  7  7  7  7  7
+##  [392] 11  7  9  9  8  7  8  9  7  8  9  9  9  7  7  6  7  6  7  6  8  7  8
+##  [415]  8  8  8  9  7  8  8  7 10  7  6  8  6  7  8  7  9  7  7  8  5  6  9
+##  [438]  8 11  9  5  7  9  6  7  8  7  8  7  9 11  8  8  8  5  7  9  7  6  6
+##  [461] 10  9  9 10  8  6  8  6  8  8  7 10  8  7  8  5 10 11  8  7  7  8  6
+##  [484]  7  9  8  8  8  9  8  8  8  7 12  6  7  8  8  9  7 10  8  8  8  8  7
+##  [507]  5  7  6  8  7  6  8  6  7  9 12  6  6  8  9  9 10  7 11  9  7  6  8
+##  [530]  6  8  6  9  8 10  7  7  6  9  9  7  7  7  7  8  7  7  9  8 10  7  7
+##  [553]  7 10  6  5  6  6  6  6  9  6  7 10  9 11  9  7  6  7  8  6  9  6  6
+##  [576] 10  5  6  7  8  8  7  6  8  7  7 12 10  9  6  7  6  6  6  7  9  8  9
+##  [599]  7  6  8  7  7  9  7  8  6 10  7  5  9  7 10  8  7  8  7  7 10  9  9
+##  [622]  7 10  7 10  6  8  7  8  7  6  7  7  7  8  9  5  9  7  6  8  8  5  7
+##  [645]  7  9  8  7  7  7 11  7  6  7  9  7 10  9  8  8  7  8  8  7  8  6 11
+##  [668]  7  9  8  6 10  7  6  9  6  6  8  8  9  8  6  7  8  7  9  7  7  6  6
+##  [691]  8  7  7  6  6  8  8 10  7  5  8 10  7  7  7  7  5 10  9  9  8  8  9
+##  [714]  9  8  7  8  8  7  8  7  7  7  7  7  8 10  6  7  6  8  6  7  6  6  6
+##  [737]  7  8  5 10  8  6  6 11  7  7  7  8  6  7  6  8 10  8  7  9 10  7 10
+##  [760]  8  8  9  7  9  6  7 10  7  9  8  9  9  7  7  7  8  7 10  8  8  7  7
+##  [783]  8  8 10  7  7  9  8  9  7  9  9  7  9  8  5  9  9  8  7  9  6  5  8
+##  [806]  8  6  6 10  6  9  8  7  7  8  8  8  7  6  7  6  8  7  8  8  8  6  7
+##  [829]  8  8 12  6  7 10  8  9  7  8  7  7  9  6  7  7  6  7  8  9  7  6  8
+##  [852]  6  5  9  7  6  7  9 10  7  9  9  7  8  8  8  8  6  7  9  8  6  9  9
+##  [875]  8  7 10 10  8  7  8  8  7  7  6  7  7  6  6  8  6  7  6  7  9 10  8
+##  [898]  9  8  9  7  7  7  7  7  7  7  6  8  8  8  7 10  6  9  7 10  9  9  9
+##  [921]  7  8  8  7  8  7  8  7  7  6  8  8 11  7  8  9  5 10  7  8  8 10  6
+##  [944]  8  7  7  7  7  7  9  7  6  5  7  5  7  9  8  8  8  8  9  6  6  8  7
+##  [967]  9  7  7  7  7  9  9  9  9  7  8  7  9  8  7  6  9  5  8  7  7  7 11
+##  [990]  7  8  9  8  8  6  7  7  8  8  9</code></pre>
+<pre class="r"><code>hist(ndiceneededtowin)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<pre class="r"><code>meanndiceneededtowin &lt;- mean(ndiceneededtowin)
+c(meanndiceneededtowin)</code></pre>
+<pre><code>## [1] 7.662</code></pre>
 </div>
 
 
