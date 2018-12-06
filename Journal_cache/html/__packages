@@ -1,1 +1,7 @@
 base
+data.table
+summarytools
+dplyr
+ggplot2
+bindrcpp
+xtable
